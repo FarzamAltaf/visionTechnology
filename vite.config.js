@@ -13,12 +13,13 @@ export default defineConfig({
       name: 'VisionTechnology',
       short_name: 'VisionTechnology',
       description: 'Vision Technology website',
-      theme_color: '#000000'
+      theme_color: '#000000',
     },
     workbox: {
-      globPatterns: ['**/*.{js,css,html,svg,png,ico}'],
+      globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2,woff,ttf,eot}'],
       cleanupOutdatedCaches: true,
-      clientsClaim: true
+      clientsClaim: true,
+      maximumFileSizeToCacheInBytes: 10 * 1024 * 1024 // 🔥 10 MB tak allow
     }
   })
   ],
