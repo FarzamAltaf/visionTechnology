@@ -19,7 +19,7 @@ export default defineConfig({
       globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2,woff,ttf,eot}'],
       cleanupOutdatedCaches: true,
       clientsClaim: true,
-      maximumFileSizeToCacheInBytes: 10 * 1024 * 1024 // 🔥 10 MB tak allow
+      maximumFileSizeToCacheInBytes: 10 * 1024 * 1024
     }
   })
   ],
