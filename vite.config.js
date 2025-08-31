@@ -15,9 +15,9 @@ export default defineConfig({
     },
 
     manifest: {
-      name: 'fainternationals',
-      short_name: 'fainternationals',
-      description: 'FA Internationals website',
+      name: 'VisionTechnology',
+      short_name: 'VisionTechnology',
+      description: 'Vision Technology website',
       theme_color: '#000000',
     },
 
