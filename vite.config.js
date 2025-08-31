@@ -5,33 +5,21 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(), VitePWA({
-    registerType: 'prompt',
-    injectRegister: false,
-
-    pwaAssets: {
-      disabled: false,
-      config: true,
-    },
-
+  plugins: [react(), tailwindcss(),
+  VitePWA({
+    registerType: 'autoUpdate',
+    injectRegister: 'auto',
     manifest: {
       name: 'VisionTechnology',
       short_name: 'VisionTechnology',
       description: 'Vision Technology website',
-      theme_color: '#000000',
+      theme_color: '#000000'
     },
-
     workbox: {
       globPatterns: ['**/*.{js,css,html,svg,png,ico}'],
       cleanupOutdatedCaches: true,
-      clientsClaim: true,
-    },
-
-    devOptions: {
-      enabled: true,
-      navigateFallback: 'index.html',
-      suppressWarnings: true,
-      type: 'module',
-    },
-  })],
+      clientsClaim: true
+    }
+  })
+  ],
 })
